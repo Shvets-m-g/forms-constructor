@@ -6,7 +6,7 @@ export const useInput = initialValue => {
 
     return {
         value,
-         setValue,
+        setValue,
         reset: () => setValue(""),
         bind: {
             value,
@@ -18,20 +18,29 @@ export const useInput = initialValue => {
 };
 
 export function Input(props) {
-
-    const { value:firstName, bind:bindFirstName, reset:resetFirstName } = useInput('');
-
+    const { value: name, bind: bind, reset: reset } = useInput(props.form.value);
     const handleSubmit = (evt) => {
         evt.preventDefault();
-        alert(`Submitting Name ${firstName} `);
-        resetFirstName();
+        reset();
     }
     return (
         <form onSubmit={handleSubmit}>
             <label>
-                First Name:
-                s
-                <input type="text" {...bindFirstName} />
+                {props.form.name} <br/>
+                <input
+                    type={props.form.type}
+                    placeholder={props.form.placeholder}
+                    id={props.form.fieldKey}
+                    className={` ${props.form.customClass}`}
+                    pattern={props.form.pattern}
+                    readOnly={props.form.isReadOnly}
+                    disabled={props.form.isDisabled}
+                    required={props.form.isRequired}
+                    onChange={props.form.onChange}
+                    onBlur={props.form.onBlur}
+                    onFocus={props.form.onFocus}
+                    {...bind}
+                />
             </label>
         </form>
     );

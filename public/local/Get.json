@@ -1,0 +1,61 @@
+{
+  "form": [
+    {
+      "id": 1,
+      "key":"code",
+      "type": "text",
+      "isEditable": true,
+      "editor":"",
+      "contentType":"string",
+      "name": "Name",
+      "value": "12",
+      "values":"url",
+      "minLength":"",
+      "maxLength":""
+    },
+    {
+      "id": 2,
+      "key":"color",
+      "type": "colorPicker",
+      "editor":"",
+      "isEditable": true,
+      "contentType":"color",
+      "name": "color for",
+      "value": "#222211"
+    },
+    {
+      "id": 3,
+      "source":"",
+      "key":"code",
+      "type": "datePicker",
+      "isEditable": true,
+      "editor":"",
+      "contentType":"string",
+      "minLength":"",
+      "maxLength":"",
+      "name": "Date",
+      "value": "",
+      "startDay": "2018-04-23T18:25:43.511Z",
+      "endDay": "2022-04-23T18:25:43.511Z"
+    },
+    {
+      "id": 4,
+      "source":"select",
+      "key":"code",
+      "type": "colorPicker",
+      "isEditable": true,
+      "editor":"",
+      "contentType":"string",
+      "minLength":"",
+      "maxLength":"",
+      "name": "Name",
+      "value": "defaul",
+      "values": [
+        {
+          "title": "title",
+          "value": "value"
+        }
+      ]
+    }
+  ]
+}
